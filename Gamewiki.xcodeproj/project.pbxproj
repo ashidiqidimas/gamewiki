@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FC84D94840C5B66D9BA1905 /* Pods_Gamewiki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 856CB0ABC079B2B455E3F3C0 /* Pods_Gamewiki.framework */; };
+		2D13FED426ED98B700D2DBA5 /* HottestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D13FED326ED98B700D2DBA5 /* HottestCollectionViewCell.swift */; };
 		2D41FFE126E8C4BA001FEFB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D41FFE026E8C4BA001FEFB5 /* AppDelegate.swift */; };
 		2D41FFE326E8C4BA001FEFB5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D41FFE226E8C4BA001FEFB5 /* SceneDelegate.swift */; };
 		2D41FFE526E8C4BA001FEFB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D41FFE426E8C4BA001FEFB5 /* ViewController.swift */; };
 		2D41FFE826E8C4BA001FEFB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D41FFE626E8C4BA001FEFB5 /* Main.storyboard */; };
 		2D41FFEA26E8C4BC001FEFB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D41FFE926E8C4BC001FEFB5 /* Assets.xcassets */; };
 		2D41FFED26E8C4BC001FEFB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D41FFEB26E8C4BC001FEFB5 /* LaunchScreen.storyboard */; };
+		2D41FFF826E8CCE8001FEFB5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D41FFF726E8CCE8001FEFB5 /* DetailViewController.swift */; };
+		2D41FFFB26E8DB0C001FEFB5 /* PressStart2P-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D41FFFA26E8DB0C001FEFB5 /* PressStart2P-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D13FED326ED98B700D2DBA5 /* HottestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HottestCollectionViewCell.swift; sourceTree = "<group>"; };
 		2D41FFDD26E8C4BA001FEFB5 /* Gamewiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gamewiki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D41FFE026E8C4BA001FEFB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D41FFE226E8C4BA001FEFB5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,11 @@
 		2D41FFE926E8C4BC001FEFB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D41FFEC26E8C4BC001FEFB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D41FFEE26E8C4BC001FEFB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D41FFF726E8CCE8001FEFB5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		2D41FFFA26E8DB0C001FEFB5 /* PressStart2P-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PressStart2P-Regular.ttf"; sourceTree = "<group>"; };
+		41B7CD5803954EA1200A0DCB /* Pods-Gamewiki.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gamewiki.release.xcconfig"; path = "Target Support Files/Pods-Gamewiki/Pods-Gamewiki.release.xcconfig"; sourceTree = "<group>"; };
+		856CB0ABC079B2B455E3F3C0 /* Pods_Gamewiki.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gamewiki.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5DB3151C18C29E503DB0923 /* Pods-Gamewiki.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gamewiki.debug.xcconfig"; path = "Target Support Files/Pods-Gamewiki/Pods-Gamewiki.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FC84D94840C5B66D9BA1905 /* Pods_Gamewiki.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,7 +52,10 @@
 			isa = PBXGroup;
 			children = (
 				2D41FFDF26E8C4BA001FEFB5 /* Gamewiki */,
+				2D41FFF926E8DAEA001FEFB5 /* Resources */,
 				2D41FFDE26E8C4BA001FEFB5 /* Products */,
+				A271340273F6E24389548A32 /* Pods */,
+				31AF2A3D1D5A8817506836A6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +72,64 @@
 			children = (
 				2D41FFE026E8C4BA001FEFB5 /* AppDelegate.swift */,
 				2D41FFE226E8C4BA001FEFB5 /* SceneDelegate.swift */,
-				2D41FFE426E8C4BA001FEFB5 /* ViewController.swift */,
-				2D41FFE626E8C4BA001FEFB5 /* Main.storyboard */,
+				2D41FFF626E8C6E5001FEFB5 /* Model */,
+				2D41FFF526E8C6CB001FEFB5 /* View */,
+				2D41FFF426E8C6C0001FEFB5 /* Controller */,
 				2D41FFE926E8C4BC001FEFB5 /* Assets.xcassets */,
 				2D41FFEB26E8C4BC001FEFB5 /* LaunchScreen.storyboard */,
 				2D41FFEE26E8C4BC001FEFB5 /* Info.plist */,
 			);
 			path = Gamewiki;
+			sourceTree = "<group>";
+		};
+		2D41FFF426E8C6C0001FEFB5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2D41FFE426E8C4BA001FEFB5 /* ViewController.swift */,
+				2D41FFF726E8CCE8001FEFB5 /* DetailViewController.swift */,
+				2D13FED326ED98B700D2DBA5 /* HottestCollectionViewCell.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2D41FFF526E8C6CB001FEFB5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2D41FFE626E8C4BA001FEFB5 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2D41FFF626E8C6E5001FEFB5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2D41FFF926E8DAEA001FEFB5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2D41FFFA26E8DB0C001FEFB5 /* PressStart2P-Regular.ttf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		31AF2A3D1D5A8817506836A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				856CB0ABC079B2B455E3F3C0 /* Pods_Gamewiki.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A271340273F6E24389548A32 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E5DB3151C18C29E503DB0923 /* Pods-Gamewiki.debug.xcconfig */,
+				41B7CD5803954EA1200A0DCB /* Pods-Gamewiki.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +139,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D41FFF126E8C4BC001FEFB5 /* Build configuration list for PBXNativeTarget "Gamewiki" */;
 			buildPhases = (
+				2D41FFFC26E9F24A001FEFB5 /* ShellScript */,
+				C8CE6837A20D39D3A63AA270 /* [CP] Check Pods Manifest.lock */,
 				2D41FFD926E8C4BA001FEFB5 /* Sources */,
 				2D41FFDA26E8C4BA001FEFB5 /* Frameworks */,
 				2D41FFDB26E8C4BA001FEFB5 /* Resources */,
@@ -124,6 +191,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D41FFFB26E8DB0C001FEFB5 /* PressStart2P-Regular.ttf in Resources */,
 				2D41FFED26E8C4BC001FEFB5 /* LaunchScreen.storyboard in Resources */,
 				2D41FFEA26E8C4BC001FEFB5 /* Assets.xcassets in Resources */,
 				2D41FFE826E8C4BA001FEFB5 /* Main.storyboard in Resources */,
@@ -132,14 +200,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2D41FFFC26E9F24A001FEFB5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n\n";
+		};
+		C8CE6837A20D39D3A63AA270 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Gamewiki-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2D41FFD926E8C4BA001FEFB5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2D41FFE526E8C4BA001FEFB5 /* ViewController.swift in Sources */,
+				2D13FED426ED98B700D2DBA5 /* HottestCollectionViewCell.swift in Sources */,
 				2D41FFE126E8C4BA001FEFB5 /* AppDelegate.swift in Sources */,
 				2D41FFE326E8C4BA001FEFB5 /* SceneDelegate.swift in Sources */,
+				2D41FFF826E8CCE8001FEFB5 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +395,7 @@
 		};
 		2D41FFF226E8C4BC001FEFB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5DB3151C18C29E503DB0923 /* Pods-Gamewiki.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +415,7 @@
 		};
 		2D41FFF326E8C4BC001FEFB5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41B7CD5803954EA1200A0DCB /* Pods-Gamewiki.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

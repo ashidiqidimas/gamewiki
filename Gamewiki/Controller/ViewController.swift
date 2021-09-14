@@ -23,7 +23,7 @@ class ViewController: UIViewController {
 		resultsTableView.delegate = self
 		
 		resultsTableView.translatesAutoresizingMaskIntoConstraints = false
-		resultsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "SearchResultCell")
+		resultsTableView.register(UINib(nibName: ResultCell.nib, bundle: nil), forCellReuseIdentifier: ResultCell.identifier)
 		resultsTableView.keyboardDismissMode = .onDrag
 		view.addSubview(resultsTableView)
 		
@@ -40,6 +40,7 @@ class ViewController: UIViewController {
 	@IBAction func screenTapped(_ sender: Any) {
 		searchMovies.endEditing(true)
 		resultsTableView.isHidden = true
+		print("tapped")
 	}
 	
 	func customizeUI() {
@@ -60,6 +61,7 @@ class ViewController: UIViewController {
 		
 		// Table view for showing search's results
 		resultsTableView.backgroundColor = .clear
+		resultsTableView.separatorInset = .init(top: 0, left: 32, bottom: 0, right: 32)
 	}
 	
 	func configureNavBar() {
@@ -96,7 +98,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: "SearchResultCell", for: indexPath)
+		let cell = tableView.dequeueReusableCell(withIdentifier: ResultCell.identifier, for: indexPath)
 		cell.textLabel?.text = "blabla"
 		
 		return cell
@@ -107,14 +109,23 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 extension ViewController: UISearchBarDelegate {
 	func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
 		resultsTableView.isHidden = false
-		searchMovies.showsCancelButton = true
+		searchBar.showsCancelButton = true
+	}
+	
+	func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
+		// cancel button becomes disabled when search bar isn't first responder, force it back enabled
+		DispatchQueue.main.async {
+			if let cancelButton = searchBar.value(forKey: "cancelButton") as? UIButton {
+				cancelButton.isEnabled = true
+			}
+		}
+		return true
 	}
 
 	func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-		print("canceled")
 		searchBar.endEditing(true)
 		resultsTableView.isHidden = true
-		
-		print(resultsTableView.isHidden)
+		searchBar.searchTextField.text = ""
 	}
+	
 }

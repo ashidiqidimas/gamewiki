@@ -15,12 +15,55 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eW4-je-uiV">
+                                <rect key="frame" x="0.0" y="88" width="390" height="756"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" placeholder="Search Game" translatesAutoresizingMaskIntoConstraints="NO" id="UwQ-0b-q9p">
+                                        <rect key="frame" x="24" y="16" width="342" height="40"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="myM-YE-p2P"/>
+                                        </constraints>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                </subviews>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="UwQ-0b-q9p" firstAttribute="leading" secondItem="eW4-je-uiV" secondAttribute="leading" constant="24" id="7hF-1E-prY"/>
+                                    <constraint firstItem="UwQ-0b-q9p" firstAttribute="top" secondItem="xqQ-2E-lK0" secondAttribute="top" constant="16" id="Ca5-R0-Kuf"/>
+                                    <constraint firstItem="UwQ-0b-q9p" firstAttribute="centerX" secondItem="eW4-je-uiV" secondAttribute="centerX" id="L32-Nn-Pxn"/>
+                                    <constraint firstAttribute="trailing" secondItem="UwQ-0b-q9p" secondAttribute="trailing" constant="24" id="vbC-d2-QlW"/>
+                                    <constraint firstAttribute="bottom" secondItem="UwQ-0b-q9p" secondAttribute="bottom" constant="700" id="zW2-8U-NlU"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="xqQ-2E-lK0"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="i9s-Gt-1nF"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="eW4-je-uiV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LpO-iX-Ndx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eW4-je-uiV" secondAttribute="trailing" id="QqX-7v-srs"/>
+                            <constraint firstAttribute="bottom" secondItem="eW4-je-uiV" secondAttribute="bottom" id="Vd8-Vo-v6m"/>
+                            <constraint firstItem="eW4-je-uiV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dcP-B4-RNq"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Lha-jC-vt3" appends="YES" id="4Ef-op-GXa"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="e9N-iN-bgS"/>
+                    <connections>
+                        <outlet property="searchMovies" destination="UwQ-0b-q9p" id="byE-is-YMP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Lha-jC-vt3">
+                    <connections>
+                        <action selector="screenTapped:" destination="BYZ-38-t0r" id="RI7-dM-qbU"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1047.6923076923076" y="118.00947867298578"/>
         </scene>

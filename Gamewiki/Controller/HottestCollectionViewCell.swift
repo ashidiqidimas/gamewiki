@@ -9,7 +9,8 @@ import UIKit
 
 class HottestCollectionViewCell: UICollectionViewCell {
 	
-    static let identifier = "HottestCollectionViewCell"
+	static let identifier = "HottestCollectionViewCell"
+	static let nib = UINib(nibName: "HottestCollectionViewCell", bundle: nil)
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)

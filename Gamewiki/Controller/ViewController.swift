@@ -10,17 +10,20 @@ import UIKit
 class ViewController: UIViewController {
 	
 	let resultsTableView = UITableView()
-	
+	@IBOutlet weak var hottestCollectionView: UICollectionView!
 	@IBOutlet weak var searchMovies: UISearchBar!
 	
 	override func viewDidLoad() {
+		fetchData()
 		
 		customizeUI()
 		configureNavBar()
+		configureHottestCollectionView()
 		
 		searchMovies.delegate = self
 		resultsTableView.dataSource = self
 		resultsTableView.delegate = self
+		hottestCollectionView.dataSource = self
 		
 		resultsTableView.translatesAutoresizingMaskIntoConstraints = false
 		resultsTableView.register(UINib(nibName: ResultCell.nib, bundle: nil), forCellReuseIdentifier: ResultCell.identifier)
@@ -36,11 +39,16 @@ class ViewController: UIViewController {
 		
 		resultsTableView.isHidden = true
 	}
-
-	@IBAction func screenTapped(_ sender: Any) {
-		searchMovies.endEditing(true)
-		resultsTableView.isHidden = true
-		print("tapped")
+	
+	func configureHottestCollectionView() {
+		hottestCollectionView.backgroundColor = .red
+		
+		hottestCollectionView.register(HottestCollectionViewCell.nib,
+									   forCellWithReuseIdentifier: HottestCollectionViewCell.identifier)
+		
+		let layout = UICollectionViewFlowLayout()
+		layout.scrollDirection = .horizontal
+		hottestCollectionView.collectionViewLayout = layout
 	}
 	
 	func customizeUI() {
@@ -92,6 +100,38 @@ class ViewController: UIViewController {
 	}
 }
 
+// MARK: - API Call Logic
+extension ViewController {
+	func fetchData() {
+		var components = URLComponents(string: "https://api.rawg.io/api/games")
+		
+		components?.queryItems = [
+			URLQueryItem(name: "key", value: "a4178d248c7b4502910ec5be5d65ddad")
+		]
+		
+		if let url = components?.url {
+			if let data = try? Data(contentsOf: url) {
+				print(data)
+			}
+		}
+	}
+}
+
+extension ViewController: UICollectionViewDataSource {
+	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+		return 3
+	}
+	
+	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+		guard let cell = hottestCollectionView.dequeueReusableCell(withReuseIdentifier:
+																	HottestCollectionViewCell.identifier, for: indexPath)
+				as? HottestCollectionViewCell else { fatalError() }
+		
+		return cell
+	}
+	
+}
+
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return 10
@@ -127,5 +167,4 @@ extension ViewController: UISearchBarDelegate {
 		resultsTableView.isHidden = true
 		searchBar.searchTextField.text = ""
 	}
-	
 }

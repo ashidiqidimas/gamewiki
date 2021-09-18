@@ -18,8 +18,10 @@
 		2D41FFFB26E8DB0C001FEFB5 /* PressStart2P-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D41FFFA26E8DB0C001FEFB5 /* PressStart2P-Regular.ttf */; };
 		2D910C0226F4359800877F11 /* ResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D910C0026F4359800877F11 /* ResultCell.swift */; };
 		2D910C0326F4359800877F11 /* ResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D910C0126F4359800877F11 /* ResultCell.xib */; };
-		2D910C0826F4370900877F11 /* HottestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D910C0626F4370900877F11 /* HottestCollectionViewCell.swift */; };
-		2D910C0926F4370900877F11 /* HottestCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D910C0726F4370900877F11 /* HottestCollectionViewCell.xib */; };
+		2D910C0B26F4AC8600877F11 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D910C0A26F4AC8600877F11 /* Game.swift */; };
+		2D910C1626F4B66E00877F11 /* HottestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D910C1426F4B66E00877F11 /* HottestCollectionViewCell.swift */; };
+		2D910C1726F4B66E00877F11 /* HottestCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D910C1526F4B66E00877F11 /* HottestCollectionViewCell.xib */; };
+		2D910C1926F4B8B600877F11 /* StarsRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D910C1826F4B8B600877F11 /* StarsRating.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +37,10 @@
 		2D41FFFA26E8DB0C001FEFB5 /* PressStart2P-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PressStart2P-Regular.ttf"; sourceTree = "<group>"; };
 		2D910C0026F4359800877F11 /* ResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCell.swift; sourceTree = "<group>"; };
 		2D910C0126F4359800877F11 /* ResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultCell.xib; sourceTree = "<group>"; };
-		2D910C0626F4370900877F11 /* HottestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HottestCollectionViewCell.swift; sourceTree = "<group>"; };
-		2D910C0726F4370900877F11 /* HottestCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HottestCollectionViewCell.xib; sourceTree = "<group>"; };
+		2D910C0A26F4AC8600877F11 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		2D910C1426F4B66E00877F11 /* HottestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HottestCollectionViewCell.swift; sourceTree = "<group>"; };
+		2D910C1526F4B66E00877F11 /* HottestCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HottestCollectionViewCell.xib; sourceTree = "<group>"; };
+		2D910C1826F4B8B600877F11 /* StarsRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsRating.swift; sourceTree = "<group>"; };
 		41B7CD5803954EA1200A0DCB /* Pods-Gamewiki.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gamewiki.release.xcconfig"; path = "Target Support Files/Pods-Gamewiki/Pods-Gamewiki.release.xcconfig"; sourceTree = "<group>"; };
 		856CB0ABC079B2B455E3F3C0 /* Pods_Gamewiki.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gamewiki.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5DB3151C18C29E503DB0923 /* Pods-Gamewiki.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gamewiki.debug.xcconfig"; path = "Target Support Files/Pods-Gamewiki/Pods-Gamewiki.debug.xcconfig"; sourceTree = "<group>"; };
@@ -92,9 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				2D41FFE426E8C4BA001FEFB5 /* ViewController.swift */,
-				2D910C0026F4359800877F11 /* ResultCell.swift */,
 				2D41FFF726E8CCE8001FEFB5 /* DetailViewController.swift */,
-				2D910C0626F4370900877F11 /* HottestCollectionViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -104,7 +106,10 @@
 			children = (
 				2D41FFE626E8C4BA001FEFB5 /* Main.storyboard */,
 				2D910C0126F4359800877F11 /* ResultCell.xib */,
-				2D910C0726F4370900877F11 /* HottestCollectionViewCell.xib */,
+				2D910C1526F4B66E00877F11 /* HottestCollectionViewCell.xib */,
+				2D910C1426F4B66E00877F11 /* HottestCollectionViewCell.swift */,
+				2D910C0026F4359800877F11 /* ResultCell.swift */,
+				2D910C1826F4B8B600877F11 /* StarsRating.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -112,6 +117,7 @@
 		2D41FFF626E8C6E5001FEFB5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2D910C0A26F4AC8600877F11 /* Game.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,7 +208,7 @@
 			files = (
 				2D41FFFB26E8DB0C001FEFB5 /* PressStart2P-Regular.ttf in Resources */,
 				2D41FFED26E8C4BC001FEFB5 /* LaunchScreen.storyboard in Resources */,
-				2D910C0926F4370900877F11 /* HottestCollectionViewCell.xib in Resources */,
+				2D910C1726F4B66E00877F11 /* HottestCollectionViewCell.xib in Resources */,
 				2D41FFEA26E8C4BC001FEFB5 /* Assets.xcassets in Resources */,
 				2D41FFE826E8C4BA001FEFB5 /* Main.storyboard in Resources */,
 				2D910C0326F4359800877F11 /* ResultCell.xib in Resources */,
@@ -260,9 +266,11 @@
 			files = (
 				2D41FFE526E8C4BA001FEFB5 /* ViewController.swift in Sources */,
 				2D910C0226F4359800877F11 /* ResultCell.swift in Sources */,
+				2D910C1626F4B66E00877F11 /* HottestCollectionViewCell.swift in Sources */,
+				2D910C0B26F4AC8600877F11 /* Game.swift in Sources */,
 				2D41FFE126E8C4BA001FEFB5 /* AppDelegate.swift in Sources */,
 				2D41FFE326E8C4BA001FEFB5 /* SceneDelegate.swift in Sources */,
-				2D910C0826F4370900877F11 /* HottestCollectionViewCell.swift in Sources */,
+				2D910C1926F4B8B600877F11 /* StarsRating.swift in Sources */,
 				2D41FFF826E8CCE8001FEFB5 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

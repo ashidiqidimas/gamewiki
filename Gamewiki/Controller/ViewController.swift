@@ -24,6 +24,7 @@ class ViewController: UIViewController {
 		resultsTableView.dataSource = self
 		resultsTableView.delegate = self
 		hottestCollectionView.dataSource = self
+//		hottestCollectionView.delegate = self
 		
 		resultsTableView.translatesAutoresizingMaskIntoConstraints = false
 		resultsTableView.register(UINib(nibName: ResultCell.nib, bundle: nil), forCellReuseIdentifier: ResultCell.identifier)
@@ -41,14 +42,19 @@ class ViewController: UIViewController {
 	}
 	
 	func configureHottestCollectionView() {
-		hottestCollectionView.backgroundColor = .red
+		hottestCollectionView.backgroundColor = .clear
+		hottestCollectionView.showsHorizontalScrollIndicator = false
 		
 		hottestCollectionView.register(HottestCollectionViewCell.nib,
 									   forCellWithReuseIdentifier: HottestCollectionViewCell.identifier)
 		
 		let layout = UICollectionViewFlowLayout()
 		layout.scrollDirection = .horizontal
+		layout.itemSize = CGSize(width: hottestCollectionView.frame.width - 64, height: 254)
+		layout.sectionInset = .init(top: 0, left: 32, bottom: 0, right: 0)
+		layout.minimumLineSpacing = 16
 		hottestCollectionView.collectionViewLayout = layout
+		
 	}
 	
 	func customizeUI() {
@@ -103,17 +109,20 @@ class ViewController: UIViewController {
 // MARK: - API Call Logic
 extension ViewController {
 	func fetchData() {
-		var components = URLComponents(string: "https://api.rawg.io/api/games")
-		
-		components?.queryItems = [
-			URLQueryItem(name: "key", value: "a4178d248c7b4502910ec5be5d65ddad")
-		]
-		
-		if let url = components?.url {
-			if let data = try? Data(contentsOf: url) {
-				print(data)
+		DispatchQueue.global(qos: .userInitiated).async {
+			var components = URLComponents(string: "https://api.rawg.io/api/games")
+			
+			components?.queryItems = [
+				URLQueryItem(name: "key", value: "a4178d248c7b4502910ec5be5d65ddad")
+			]
+			
+			if let url = components?.url {
+				if let data = try? Data(contentsOf: url) {
+					print(data)
+				}
 			}
 		}
+		
 	}
 }
 
@@ -129,6 +138,13 @@ extension ViewController: UICollectionViewDataSource {
 		
 		return cell
 	}
+	
+//	func collectionView(_ collectionView: UICollectionView,
+//						HottestCollectionViewCelllayout collectionViewLayout: UICollectionViewLayout,
+//						sizeForItemAt indexPath: IndexPath)
+//						-> CGSize {
+//		return CGSize(width: collectionView.frame.width - 64, height: 254)
+//	}
 	
 }
 
